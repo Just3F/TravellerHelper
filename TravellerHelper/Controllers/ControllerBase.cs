@@ -18,5 +18,13 @@ namespace TravellerHelper.Controllers
                 Errors = ex.Message
             });
         }
+        protected JsonResult InvokeError(string message)
+        {
+            return Json(new
+            {
+                HasError = true,
+                Error = message
+            });
+        }
     }
 }

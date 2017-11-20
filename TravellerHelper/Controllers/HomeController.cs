@@ -1,5 +1,6 @@
 ﻿using System.Diagnostics;
 using AutoMapper;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using TravellerHelper.Models;
 using TravellerHelper.Services;
@@ -7,10 +8,10 @@ using TravellerHelper.Services.Database;
 
 namespace TravellerHelper.Controllers
 {
+    //[Authorize]
     public class HomeController : ControllerBase
     {
         private readonly HomeService _homeService;
-        private readonly IMapper _mapper;
 
         public HomeController(ApplicationContext dbContext, IMapper mapper)
         {

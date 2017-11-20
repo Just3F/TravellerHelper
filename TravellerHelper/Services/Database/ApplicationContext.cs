@@ -10,6 +10,8 @@ namespace TravellerHelper.Services.Database
             : base(options)
         {
         }
+        public DbSet<tblUser> tblUser { get; set; }
+        public DbSet<tblRole> tblRole { get; set; }
         public DbSet<tblCity> tblCity { get; set; }
         public DbSet<tblFlight> tblFlight { get; set; }
 

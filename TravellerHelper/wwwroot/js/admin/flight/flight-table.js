@@ -2,11 +2,11 @@
     var self = {}
     self.parentContainerSelector = "#flight_table_container";
 
-    self.init = function() {
+    self.init = function () {
         self.initTable();
     }
 
-    self.reloadTable = function(data) {
+    self.reloadTable = function (data) {
         self.table.clear().draw();
         self.table.rows.add(data);
         self.table.columns.adjust().draw();

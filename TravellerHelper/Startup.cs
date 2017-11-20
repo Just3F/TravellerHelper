@@ -13,6 +13,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
 using TravellerHelper.Services.Database;
+using TravellerHelper.Services.Utils;
 
 namespace TravellerHelper
 {
@@ -25,14 +26,13 @@ namespace TravellerHelper
 
         public IConfiguration Configuration { get; }
 
-        // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<ApplicationContext>(options =>
                 options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
 
             services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
-                .AddCookie(options => //CookieAuthenticationOptions
+                .AddCookie(options => 
                 {
                     options.LoginPath = new PathString("/Account/Login");
                 });
@@ -60,7 +60,9 @@ namespace TravellerHelper
                 app.UseExceptionHandler("/Home/Error");
             }
 
-            app.UseStaticFiles();
+            RequestContextManager.Instance = new RequestContextManager(app.ApplicationServices.GetService<IHttpContextAccessor>());
+
+            app.UseStaticFiles().UseAuthentication();
 
             app.UseMvc(routes =>
             {
