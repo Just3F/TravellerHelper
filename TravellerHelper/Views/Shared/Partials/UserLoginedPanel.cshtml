@@ -6,7 +6,7 @@
             Hello,&nbsp;
         </span>
         <span class="m-topbar__username">
-            Nick
+            @AppUser.GetUserName()
         </span>
         <span class="m-topbar__userpic">
             <img src="~/assets/app/media/img/users/user4.jpg" class="m--img-rounded m--marginless m--img-centered" alt="" />
@@ -56,10 +56,10 @@
                             </a>
                         </li>
                         <li class="m-nav__item">
-                            <a href="header/profile.html" class="m-nav__link">
+                            <a asp-route="admin" class="m-nav__link">
                                 <i class="m-nav__link-icon flaticon-share"></i>
                                 <span class="m-nav__link-text">
-                                    Activity
+                                    Admin Panel
                                 </span>
                             </a>
                         </li>

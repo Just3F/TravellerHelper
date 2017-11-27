@@ -32,7 +32,7 @@ namespace TravellerHelper
                 options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
 
             services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
-                .AddCookie(options => 
+                .AddCookie(options =>
                 {
                     options.LoginPath = new PathString("/Account/Login");
                 });
@@ -66,6 +66,7 @@ namespace TravellerHelper
 
             app.UseMvc(routes =>
             {
+                routes.MapRoute("admin", "Admin", new { controller = "Admin", action = "Index" });
                 routes.MapRoute(
                     name: "default",
                     template: "{controller=Home}/{action=Index}/{id?}");

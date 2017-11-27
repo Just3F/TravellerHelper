@@ -1,12 +1,15 @@
 ﻿using System.Collections.Generic;
 using AutoMapper;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using TravellerHelper.Services;
 using TravellerHelper.Services.Database;
 using TravellerHelper.ViewModels;
+using TravellerHelper.ViewModels.Constants;
 
 namespace TravellerHelper.Controllers
 {
+    [Authorize(Roles = UserRolesConstants.Administrator)]
     public class AdminController : ControllerBase
     {
         private readonly AdminService _adminService;
@@ -26,7 +29,14 @@ namespace TravellerHelper.Controllers
             return View();
         }
 
+        [HttpGet]
         public IActionResult Flight(long id)
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult Flight(FlightViewModel model)
         {
             return View();
         }
