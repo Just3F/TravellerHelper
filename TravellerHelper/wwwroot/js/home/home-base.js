@@ -1,27 +1,28 @@
-﻿$(function() {
+﻿$(function () {
     var self = {}
     self.flightTable = new FlightTable();
 
-    self.init = function() {
+    self.init = function () {
         self.initInputs();
         self.initEvents();
     }
 
-    self.initEvents = function() {
+    self.initEvents = function () {
         $(document).on("click", "#search_btn", self.search);
     }
 
-    self.search = function() {
+    self.search = function () {
         $.ajax({
             type: "POST",
-            url: "/Home/FlightSearch"
-        }).done(function(data) {
+            url: "/Home/FlightSearch",
+            global: false
+        }).done(function (data) {
             console.log(data);
             self.flightTable.reloadTable(data);
         });
     }
 
-    self.initInputs = function() {
+    self.initInputs = function () {
         $("#date_of_travel").datepicker({
             orientation: "bottom"
         });

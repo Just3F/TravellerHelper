@@ -1,10 +1,8 @@
-﻿using System.Collections.Generic;
-using AutoMapper;
+﻿using AutoMapper;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using TravellerHelper.Services;
 using TravellerHelper.Services.Database;
-using TravellerHelper.ViewModels;
 using TravellerHelper.ViewModels.Constants;
 
 namespace TravellerHelper.Controllers
@@ -27,24 +25,6 @@ namespace TravellerHelper.Controllers
         public IActionResult Flights()
         {
             return View();
-        }
-
-        [HttpGet]
-        public IActionResult Flight(long id)
-        {
-            return View();
-        }
-
-        [HttpPost]
-        public IActionResult Flight(FlightViewModel model)
-        {
-            return View();
-        }
-
-        public JsonResult SearchFlights()
-        {
-            var m = _adminService.SearchFlights();
-            return Json(m);
         }
     }
 }

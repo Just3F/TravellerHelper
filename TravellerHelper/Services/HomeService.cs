@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using AutoMapper;
+using Microsoft.AspNetCore.Mvc;
 using TravellerHelper.Services.Database;
 using TravellerHelper.ViewModels;
 
@@ -16,10 +17,5 @@ namespace TravellerHelper.Services
             _mapper = mapper;
         }
 
-        public List<FlightViewModel> FlightSearch()
-        {
-            var m = _mapper.Map<List<FlightViewModel>>(_db.tblFlight);
-            return m;
-        }
     }
 }

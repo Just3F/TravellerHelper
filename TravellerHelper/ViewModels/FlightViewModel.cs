@@ -10,7 +10,8 @@ namespace TravellerHelper.ViewModels
         public long PKID { get; set; }
         public DateTime TimeFrom { get; set; }
         public DateTime TimeTo { get; set; }
-        public DateTime Date { get; set; }
+        public DateTime CreatedDate { get; set; }
+        public long CreatedById { get; set; }
         public int SeatsMax { get; set; }
         public int SeatsReserved { get; set; }
         public int AvailableSeats => SeatsMax - SeatsReserved;

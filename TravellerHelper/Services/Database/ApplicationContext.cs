@@ -12,8 +12,6 @@ namespace TravellerHelper.Services.Database
         }
         public DbSet<tblUser> tblUser { get; set; }
         public DbSet<tblRole> tblRole { get; set; }
-        public DbSet<tblCity> tblCity { get; set; }
-        public DbSet<tblFlight> tblFlight { get; set; }
 
         protected override void OnModelCreating(ModelBuilder builder)
         {

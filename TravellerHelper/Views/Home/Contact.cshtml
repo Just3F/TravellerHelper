@@ -1,17 +1,28 @@
-﻿@{
-    ViewData["Title"] = "Contact";
+﻿@model object
+
+@{
+    ViewBag.Title = "Контакты";
+    Layout = "_Layout";
 }
-<h2>@ViewData["Title"]</h2>
-<h3>@ViewData["Message"]</h3>
 
-<address>
-    One Microsoft Way<br />
-    Redmond, WA 98052-6399<br />
-    <abbr title="Phone">P:</abbr>
-    425.555.0100
-</address>
 
-<address>
-    <strong>Support:</strong> <a href="mailto:Support@example.com">Support@example.com</a><br />
-    <strong>Marketing:</strong> <a href="mailto:Marketing@example.com">Marketing@example.com</a>
-</address>
+<div>
+    <div class="blog-post-title-custom">Контакты<hr /></div>
+    <div class="main-text-content">
+        <p>
+            Вы можете связаться с нами по следующим телефонам:
+        </p>
+        <p>
+            +7 (812) 628-93-95;
+        </p>
+        <p>
+            +7 (921) 916-04-59.
+        </p>
+        <p>
+            Адрес:Санкт-Петербург, набережная  Обводного канала, дом 150, офис 408.
+        </p>
+        <p>
+            Email:<a href="mailto:gsk-st@yandex.ru">gsk-st@yandex.ru</a>
+        </p>
+    </div>
+</div>

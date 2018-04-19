@@ -1,7 +1,5 @@
-﻿using System.Collections.Generic;
-using AutoMapper;
+﻿using AutoMapper;
 using TravellerHelper.Services.Database;
-using TravellerHelper.ViewModels;
 
 namespace TravellerHelper.Services
 {
@@ -13,10 +11,6 @@ namespace TravellerHelper.Services
             _mapper = mapper;
         }
 
-        public List<FlightViewModel> SearchFlights()
-        {
-            var m = _mapper.Map<List<FlightViewModel>>(_db.tblFlight);
-            return m;
-        }
+      
     }
 }

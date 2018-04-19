@@ -23,23 +23,31 @@ namespace TravellerHelper.Controllers
             return View();
         }
 
-        public JsonResult FlightSearch()
-        {
-            var m = _homeService.FlightSearch();
-            return Json(m);
-        }
 
         public IActionResult About()
         {
-            ViewData["Message"] = "Your application description page.";
-
             return View();
         }
 
         public IActionResult Contact()
         {
-            ViewData["Message"] = "Your contact page.";
+            return View();
+        }
 
+        public IActionResult UzakonitNezakonnuyuRekonstrukciyu()
+        {
+            return View();
+        }
+        public IActionResult UzakonenieNezakonnyxPostroek()
+        {
+            return View();
+        }
+        public IActionResult PriznaniePravaSobstvennostiNaSamovolnuyuPostrojku()
+        {
+            return View();
+        }
+        public IActionResult UzakonitIndividualnoeZhiloeStroenie()
+        {
             return View();
         }
 

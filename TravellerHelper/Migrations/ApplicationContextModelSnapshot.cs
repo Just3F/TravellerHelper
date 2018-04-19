@@ -20,48 +20,6 @@ namespace TravellerHelper.Migrations
                 .HasAnnotation("ProductVersion", "2.0.1-rtm-125")
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-            modelBuilder.Entity("TravellerHelper.Models.tblCity", b =>
-                {
-                    b.Property<long>("PKID")
-                        .ValueGeneratedOnAdd();
-
-                    b.Property<string>("Name");
-
-                    b.HasKey("PKID");
-
-                    b.ToTable("tblCity");
-                });
-
-            modelBuilder.Entity("TravellerHelper.Models.tblFlight", b =>
-                {
-                    b.Property<long>("PKID")
-                        .ValueGeneratedOnAdd();
-
-                    b.Property<long>("CityFromId");
-
-                    b.Property<long>("CityToId");
-
-                    b.Property<DateTime>("Date");
-
-                    b.Property<decimal>("Price");
-
-                    b.Property<int>("SeatsMax");
-
-                    b.Property<int>("SeatsReserved");
-
-                    b.Property<DateTime>("TimeFrom");
-
-                    b.Property<DateTime>("TimeTo");
-
-                    b.HasKey("PKID");
-
-                    b.HasIndex("CityFromId");
-
-                    b.HasIndex("CityToId");
-
-                    b.ToTable("tblFlight");
-                });
-
             modelBuilder.Entity("TravellerHelper.Models.tblRole", b =>
                 {
                     b.Property<long>("PKID")
@@ -96,19 +54,6 @@ namespace TravellerHelper.Migrations
                     b.HasIndex("RoleId");
 
                     b.ToTable("tblUser");
-                });
-
-            modelBuilder.Entity("TravellerHelper.Models.tblFlight", b =>
-                {
-                    b.HasOne("TravellerHelper.Models.tblCity", "CityFrom")
-                        .WithMany()
-                        .HasForeignKey("CityFromId")
-                        .OnDelete(DeleteBehavior.Restrict);
-
-                    b.HasOne("TravellerHelper.Models.tblCity", "CityTo")
-                        .WithMany()
-                        .HasForeignKey("CityToId")
-                        .OnDelete(DeleteBehavior.Restrict);
                 });
 
             modelBuilder.Entity("TravellerHelper.Models.tblUser", b =>

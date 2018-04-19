@@ -1,6 +1,4 @@
 ﻿using AutoMapper;
-using TravellerHelper.Models;
-using TravellerHelper.ViewModels;
 
 namespace TravellerHelper.Services.Utils
 {
@@ -8,8 +6,11 @@ namespace TravellerHelper.Services.Utils
     {
         public MappingProfile()
         {
-            CreateMap<tblFlight, FlightViewModel>();
-            CreateMap<FlightViewModel, tblFlight>();
+            //CreateMap<tblFlight, FlightViewModel>();
+            //    //.ForMember(x => x.Cities, y => y.MapFrom(src => src.));
+            //CreateMap<FlightViewModel, tblFlight>();
+            //CreateMap<tblCity, CityViewModel>();
+            //CreateMap<CityViewModel, tblCity>();
         }
     }
 }
