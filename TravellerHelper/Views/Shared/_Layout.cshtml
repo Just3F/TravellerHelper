@@ -65,25 +65,20 @@
                         </span>
                     </a>
                 </li>
-                <li>
-                    <a href="http://xn----etbhscwgifr.xn--p1ai/">
-                        <span>
-                            <i class="fa fa-fw fa-phone"></i> Проектная компания «ГСК-Проект»
-                        </span>
-                    </a>
-                </li>
-                <li>
-                    <a href="http://www.gsk-stroy.ru/">
-                        <span>
-                            <i class="fa fa-fw fa-phone"></i> Проектная организация «ГСК-Строй»
-                        </span>
-                    </a>
-                </li>
             </ul>
         </div>
         <br />
         <div class="row">
             <div class="col-xl-4">
+                <div class="sidebar-banner">
+                    <div class="sidebar-title">
+                        <img src="../images/logo_gsk_proect.png" style="width: 60px; height: 44px;" /><a href="http://xn----etbhscwgifr.xn--p1ai/">Проекты реставрации</a>
+                    </div>
+                    <div class="sidebar-title" style="margin-bottom:0px;">
+                        <img src="../images/logo_gsk_stroy.png" style="width: 60px; height: 44px;" /><a href="http://www.gsk-stroy.ru/">Проектные работы</a>
+                    </div>
+                </div>
+                <br>
                 <div class="sidebar-container">
                     <div class="sidebar-title">
                         Меню сайта
@@ -95,6 +90,9 @@
                             <li><a href="">Отклонение от предельных параметров разрешенного строительства</a></li>
                             <li><a href="">Оспорить Проект планировки</a></li>
                             <li><a href="">Оспорить отказ в выдаче разрешения на строительство</a></li>
+                        </ul>
+                        <span class="category-title">Узаконение незаконных построек:</span>
+                        <ul>
                             <li class="@(ViewContext.RouteData.Values["Action"].ToString() == "UzakonitNezakonnuyuRekonstrukciyu" ? "selected" : "")">
                                 <a asp-action="UzakonitNezakonnuyuRekonstrukciyu">Узаконить незаконную реконструкцию</a>
                             </li>
@@ -108,11 +106,11 @@
                                 <a asp-action="UzakonitIndividualnoeZhiloeStroenie">Узаконить индивидуальное жилое строение через суд (ИЖС)</a>
                             </li>
                         </ul>
-                        <span class="category-title">Наши проекты</span>
+                        @*<span class="category-title">Наши проекты</span>
                             <ul>
                                 <li><a href="http://xn----etbhscwgifr.xn--p1ai/">Проектная компания «ГСК-Проект»</a></li>
                                 <li><a href="http://www.gsk-stroy.ru/">Проектная организация «ГСК-Строй»</a></li>
-                            </ul>
+                            </ul>*@
                     </div>
                     @*<img src="images/left-bar-background.png" style=""/>*@
                 </div>

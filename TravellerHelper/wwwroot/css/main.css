@@ -244,6 +244,38 @@
         margin-bottom: 15px;
     }
 
+.sidebar-banner {
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+    background: #f5ece0;
+    background-size: 100%;
+    padding: 20px;
+}
+
+    .sidebar-banner .sidebar-title {
+        text-align: left;
+        -webkit-border-radius: 4px;
+        -moz-border-radius: 4px;
+        border-radius: 4px;
+        background: #eddccc;
+        font-size: 22px;
+        color: #603308;
+        padding: 5px 10px;
+        margin-bottom: 15px;
+    }
+    .sidebar-banner a {
+        -webkit-border-radius: 4px;
+        -moz-border-radius: 4px;
+        border-radius: 4px;
+        background: #eddccc;
+        text-align: center;
+        font-size: 22px;
+        color: #603308;
+        margin-bottom: 15px;
+        margin-left: 10px;
+    }
+
 .masthead {
     padding-bottom: 10px
 }
